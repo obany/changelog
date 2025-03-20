@@ -1,5 +1,5 @@
 # package-b - Changelog
 
-## v0.0.1-next20
+## v0.0.1-next.20
 
 - Initial Release
