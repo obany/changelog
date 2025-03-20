@@ -4,21 +4,25 @@
 			"package-name": "package-a",
 			"release-type": "node",
 			"prerelease": true,
-			"prerelease-type": "next.",
+			"prerelease-type": "next",
+			"version-strategy": "prerelease",
 			"bump-minor-pre-major": true,
 			"bump-patch-for-minor-pre-major": true,
 			"changelog-path": "packages/package-a/docs/changelog.md",
-			"include-v-in-tag": false
+			"include-v-in-tag": false,
+			"changelog-type": "github"
 		},
 		"packages/package-b": {
 			"package-name": "package-b",
 			"release-type": "node",
 			"prerelease": true,
-			"prerelease-type": "next.",
+			"prerelease-type": "next",
+			"version-strategy": "prerelease",
 			"bump-minor-pre-major": true,
 			"bump-patch-for-minor-pre-major": true,
 			"changelog-path": "packages/package-b/docs/changelog.md",
-			"include-v-in-tag": false
+			"include-v-in-tag": false,
+			"changelog-type": "github"
 		}
 	},
 	"plugins": ["node-workspace"]
