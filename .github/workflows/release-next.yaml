@@ -8,7 +8,4 @@ jobs:
     steps:
       - uses: googleapis/release-please-action@v4
         with:
-          command: manifest
-          token: ${{ secrets.GITHUB_TOKEN }}
-          config-file: release-please-config.json
-          dry-run: true
+          token: ${{ secrets.RP_TOKEN }}
