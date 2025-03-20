@@ -1,0 +1,11 @@
+# Changelog
+
+## [0.0.1-next.21](https://github.com/obany/changelog/compare/package-a-0.0.1-next.20...package-a-0.0.1-next.21) (2025-03-20)
+
+
+### Features
+
+* include dot in next prerelease type ([090bbdf](https://github.com/obany/changelog/commit/090bbdff4466909bbdaaf27a61dd0d1bf8bac4d2))
+* include dot in next prerelease type ([f627ab9](https://github.com/obany/changelog/commit/f627ab9c3b24536b1b59aae93333e982efef9773))
+* initial commit ([b9378bc](https://github.com/obany/changelog/commit/b9378bc2766ab8c0f693c839d37e3e345eadde71))
+* initial commit ([6d7e83e](https://github.com/obany/changelog/commit/6d7e83e5be444b7e470a04771efce6cb8de1ac4f))
