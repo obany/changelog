@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.1-next.25](https://github.com/obany/changelog/compare/package-b-0.0.1-next.24...package-b-0.0.1-next.25) (2025-03-20)
+
+
+### Features
+
+* package b update ([e2036d5](https://github.com/obany/changelog/commit/e2036d5ad331c5c02a68394b164b5658bbc39ceb))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * package-a bumped from 0.0.1-next.24 to 0.0.1-next.25
+
 ## [0.0.1-next.24](https://github.com/obany/changelog/compare/package-b-0.0.1-next.23...package-b-0.0.1-next.24) (2025-03-20)
 
 
