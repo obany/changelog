@@ -6,8 +6,8 @@
 			"prerelease": true,
 			"prerelease-type": "next.",
 			"version-strategy": "prerelease",
-			"bump-minor-pre-major": true,
-			"bump-patch-for-minor-pre-major": true,
+			"bump-minor-pre-major": false,
+			"bump-patch-for-minor-pre-major": false,
 			"changelog-path": "packages/package-a/docs/changelog.md",
 			"include-v-in-tag": false
 		},
@@ -17,8 +17,8 @@
 			"prerelease": true,
 			"prerelease-type": "next.",
 			"version-strategy": "prerelease",
-			"bump-minor-pre-major": true,
-			"bump-patch-for-minor-pre-major": true,
+			"bump-minor-pre-major": false,
+			"bump-patch-for-minor-pre-major": false,
 			"changelog-path": "packages/package-b/docs/changelog.md",
 			"include-v-in-tag": false
 		}
