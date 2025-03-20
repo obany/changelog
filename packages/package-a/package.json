@@ -1,6 +1,6 @@
 {
   "name": "package-a",
-  "version": "0.0.1-next.21",
+  "version": "0.0.1-next.22",
   "private": true,
   "main": "index.js",
   "scripts": {
