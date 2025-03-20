@@ -20,5 +20,6 @@
 			"changelog-path": "packages/package-b/docs/changelog.md",
 			"include-v-in-tag": false
 		}
-	}
+	},
+	"plugins": ["node-workspace"]
 }
