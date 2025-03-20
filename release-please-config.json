@@ -1,6 +1,6 @@
 {
 	"packages": {
-		"./packages/package-a": {
+		"packages/package-a": {
 			"package-name": "package-a",
 			"release-type": "node",
 			"prerelease": true,
@@ -10,7 +10,7 @@
 			"changelog-path": "packages/package-a/docs/changelog.md",
 			"include-v-in-tag": false
 		},
-		"./packages/package-b": {
+		"packages/package-b": {
 			"package-name": "package-b",
 			"release-type": "node",
 			"prerelease": true,
