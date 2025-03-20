@@ -9,7 +9,8 @@
 			"bump-minor-pre-major": true,
 			"bump-patch-for-minor-pre-major": true,
 			"changelog-path": "packages/package-a/docs/changelog.md",
-			"include-v-in-tag": false
+			"include-v-in-tag": false,
+			"$changelogTitle": "# package-a - Changelog"
 		},
 		"packages/package-b": {
 			"package-name": "package-b",
@@ -20,7 +21,8 @@
 			"bump-minor-pre-major": true,
 			"bump-patch-for-minor-pre-major": true,
 			"changelog-path": "packages/package-b/docs/changelog.md",
-			"include-v-in-tag": false
+			"include-v-in-tag": false,
+			"$changelogTitle": "# package-b - Changelog"
 		}
 	},
 	"plugins": ["node-workspace"]
