@@ -1,0 +1,28 @@
+name: prepare-release
+on:
+  workflow_dispatch:
+   inputs:
+      semverType:
+        description: 'Which type of package to release'
+        required: true
+        type: choice
+        options:
+          - 'major'
+          - 'minor'
+          - 'patch'
+          - 'prerelease'
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Config
+        run: |
+          node scripts/gen-release-config.js release/release-please-config.json ${{ inputs.semverType }}
+
+      - name: Release Please
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.RP_TOKEN }}
+          config-file: release/release-please-config.json
+          manifest-file: ${{ inputs.semverType == 'prerelease' && 'release/release-please-manifest.prerelease.json' || 'release/release-please-manifest.prod.json' }}
