@@ -1,4 +1,4 @@
-name: prepare-release-next
+name: prepare-release-patch
 on:
   workflow_dispatch
 
@@ -9,5 +9,5 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.RP_TOKEN }}
-          config-file: release/release-please-config.next.json
+          config-file: release/release-please-config.patch.json
           manifest-file: release/release-please-manifest.json
