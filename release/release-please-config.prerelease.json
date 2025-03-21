@@ -7,7 +7,10 @@
 	"packages": {
 		"packages/package-a": {
 			"package-name": "package-a",
-			"changelog-path": "docs/changelog.md"
+			"changelog-path": "docs/changelog.md",
+			"extra-files": [
+				"src/index.js"
+			]
 		},
 		"packages/package-b": {
 			"package-name": "package-b",
