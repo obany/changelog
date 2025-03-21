@@ -23,6 +23,7 @@ jobs:
 
       - name: Build Config
         run: |
+          ls -al
           node ./scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
 
       - name: Release Please
