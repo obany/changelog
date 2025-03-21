@@ -1,0 +1,28 @@
+{
+	"pull-request-header": ":robot: prerelease release prepared",
+	"release-type": "node",
+	"versioning": "prerelease",
+	"prerelease": true,
+	"prerelease-type": "next",
+	"packages": {
+		"packages/package-a": {
+			"package-name": "package-a",
+			"changelog-path": "docs/changelog.md"
+		},
+		"packages/package-b": {
+			"package-name": "package-b",
+			"changelog-path": "docs/changelog.md"
+		}
+	},
+	"plugins": [
+		"node-workspace",
+		{
+			"type": "linked-versions",
+			"groupName": "repo",
+			"components": [
+				"package-a",
+				"package-b"
+			]
+		}
+	]
+}
