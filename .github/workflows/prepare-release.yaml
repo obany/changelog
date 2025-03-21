@@ -13,25 +13,12 @@ on:
           - 'major'
 
 jobs:
-  release-please:
+  prepare-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-    
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Build Config
-        run: |
-          ls -al
-          node ./scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
-
       - name: Release Please
         uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.RP_TOKEN }}
-          config-file: release/release-please-config.json
+          config-file: release/release-please-config.${{ inputs.semverType }}.json
           manifest-file: ${{ inputs.semverType == 'prerelease' && 'release/release-please-manifest.prerelease.json' || 'release/release-please-manifest.prod.json' }}

@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+	"generate-release-configs": "node scripts/generate-release-configs.mjs release"
   },
   "repository": {
     "type": "git",

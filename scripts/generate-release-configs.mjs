@@ -4,7 +4,7 @@
  * This script will generate a configuration file for release-please.
  *
  * Usage:
- * npm run release-please <path-to-config> major/minor/patch/prerelease
+ * npm run generate-release-configs <path-to-config-directory>
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -14,35 +14,29 @@ import { gatherDirectoryNames } from './common.mjs';
  * Execute the process.
  */
 async function run() {
-	process.stdout.write('Generate Release Config\n');
-	process.stdout.write('=======================\n');
+	process.stdout.write('Generate Release Configs\n');
+	process.stdout.write('========================\n');
 	process.stdout.write('\n');
 	process.stdout.write(`Platform: ${process.platform}\n`);
 
 	if (process.argv.length <= 2) {
-		throw new Error('No target package specified');
-	}
-	if (process.argv.length <= 3) {
-		throw new Error('No semver type specified, major/minor/patch/prerelease');
+		throw new Error('No target directory specified');
 	}
 
 	process.stdout.write('\n');
-	const targetPath = path.resolve(process.argv[2]);
-	const semVerType = process.argv[3];
+	const targetDirectory = path.resolve(process.argv[2]);
 
-	if (semVerType !== 'major' && semVerType !== 'minor' && semVerType !== 'patch' && semVerType !== 'prerelease') {
-		throw new Error(`Invalid semver type ${semVerType}`);
+	process.stdout.write(`Target Directory: ${targetDirectory}\n`);
+
+	for (const semVerType of ['major', 'minor', 'patch', 'prerelease']) {
+		process.stdout.write(`\nGenerating config for ${semVerType} release...\n`);
+		await generateConfig(targetDirectory, semVerType);
 	}
-
-	process.stdout.write(`Target Path: ${targetPath}\n`);
-	process.stdout.write(`Semver Type: ${semVerType}\n`);
-
-	buildConfig(targetPath, semVerType);
 
 	process.stdout.write(`\nDone.\n`);
 }
 
-async function buildConfig(targetPath, semVerType) {
+async function generateConfig(targetDirectory, semVerType) {
 	const versioning = {
 		"major": "always-bump-major",
 		"minor": "always-bump-minor",
@@ -53,7 +47,6 @@ async function buildConfig(targetPath, semVerType) {
 	const packageNames = await gatherDirectoryNames("packages");
 	const appNames = await gatherDirectoryNames("apps");
 	packageNames.push(...appNames);
-	console.log(packageNames)
 
 	const config = {
 		"pull-request-header": `:robot: ${semVerType} release prepared`,
@@ -83,7 +76,7 @@ async function buildConfig(targetPath, semVerType) {
 		config.plugins[1].components.push(packageName);
 	}
 
-	await fs.writeFile(targetPath, JSON.stringify(config, undefined, "\t"), 'utf8');
+	await fs.writeFile(path.join(targetDirectory, `release-please-config.${semVerType}.json`), JSON.stringify(config, undefined, "\t"), 'utf8');
 }
 
 run().catch(err => {
