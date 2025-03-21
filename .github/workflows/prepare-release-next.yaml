@@ -1,6 +1,6 @@
-name: release-please
+name: prepare-release-next
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs:
   release-please:
@@ -9,3 +9,4 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.RP_TOKEN }}
+          config-file: release-please-config.next.json

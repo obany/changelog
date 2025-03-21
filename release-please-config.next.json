@@ -6,10 +6,7 @@
 			"versioning": "prerelease",
 			"prerelease": true,
 			"prerelease-type": "next",
-			"bump-minor-pre-major": true,
-			"bump-patch-for-minor-pre-major": true,
-			"changelog-path": "docs/changelog.md",
-			"include-v-in-tag": false
+			"changelog-path": "docs/changelog.md"
 		},
 		"packages/package-b": {
 			"package-name": "package-b",
@@ -17,10 +14,7 @@
 			"versioning": "prerelease",
 			"prerelease": true,
 			"prerelease-type": "next",
-			"bump-minor-pre-major": true,
-			"bump-patch-for-minor-pre-major": true,
-			"changelog-path": "docs/changelog.md",
-			"include-v-in-tag": false
+			"changelog-path": "docs/changelog.md"
 		}
 	},
 	"plugins": ["node-workspace"]
