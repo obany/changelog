@@ -26,9 +26,10 @@ jobs:
           cache: 'npm'
 
       - name: NPM Install and Patch 
-        run: |
-          npm install
-          npx patch-package --patch-dir release
+        run: npm install
+
+      - name: Patch release-please prerelease versioning strategy
+        run: npx patch-package --patch-dir release
 
       - name: Release Please
         run: |
