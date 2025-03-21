@@ -21,13 +21,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.1",
     "husky": "^9.1.7",
-    "multi-semantic-release": "^3.0.2",
-    "release-please": "^17.0.0",
-    "semantic-release": "^24.2.3"
+    "release-please": "^17.0.0"
   },
   "type": "module",
   "workspaces": [
