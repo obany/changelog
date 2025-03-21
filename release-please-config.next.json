@@ -17,7 +17,7 @@
 		"node-workspace",
 		{
 			"type": "linked-versions",
-			"groupName": "my group",
+			"groupName": "repo",
 			"components": [
 				"package-a",
 				"package-b"
