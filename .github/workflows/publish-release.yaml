@@ -32,7 +32,7 @@ jobs:
 
       - name: Create Release Configs
         run: |
-          node scripts/generate-release-configs release
+          node scripts/generate-release-configs.mjs release
 
       - name: Release Please
         run: |
