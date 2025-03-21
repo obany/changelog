@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1-next.26](https://github.com/obany/changelog/compare/package-a-v0.1.0-next.26...package-a-v0.1.1-next.26) (2025-03-21)
+
+
+### Features
+
+* update index ([3a2fc61](https://github.com/obany/changelog/commit/3a2fc61aced046b3e10ffae16d344dc66093e504))
+
 ## [0.1.0-next.26](https://github.com/obany/changelog/compare/package-a-v0.1.0-next.25...package-a-v0.1.0-next.26) (2025-03-21)
 
 
