@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.0-next.26](https://github.com/obany/changelog/compare/package-b-v0.1.0-next.25...package-b-v0.1.0-next.26) (2025-03-21)
+
+
+### Features
+
+* update index ([2b484c3](https://github.com/obany/changelog/commit/2b484c3baa261b75a4f6874cb930e4523a9f3fec))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * package-a bumped from 0.1.0-next.25 to 0.1.0-next.26
+
 ## [0.1.0-next.25](https://github.com/obany/changelog/compare/package-b-0.0.1-next.25...package-b-v0.1.0-next.25) (2025-03-21)
 
 
