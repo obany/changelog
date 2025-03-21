@@ -3,14 +3,14 @@ on:
   workflow_dispatch:
    inputs:
       semverType:
-        description: 'Which type of package to release'
+        description: 'Which type of semver to release'
         required: true
         type: choice
         options:
-          - 'major'
-          - 'minor'
-          - 'patch'
           - 'prerelease'
+          - 'patch'
+          - 'minor'
+          - 'major'
 
 jobs:
   release-please:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Build Config
         run: |
-          node scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
+          node ./scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
 
       - name: Release Please
         uses: googleapis/release-please-action@v4

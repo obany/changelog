@@ -4,7 +4,7 @@
  * This script will generate a configuration file for release-please.
  *
  * Usage:
- * npm run release-please <path-to-config> major/minor/patch/next
+ * npm run release-please <path-to-config> major/minor/patch/prerelease
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
