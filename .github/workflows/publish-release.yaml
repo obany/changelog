@@ -28,8 +28,8 @@ jobs:
       - name: NPM Install and Patch 
         run: |
           npm install
-          npx patch-package
+          npx patch-package --patch-dir release
 
       - name: Release Please
         run: |
-          node_modules/.bin/release-please github-release --config=release/release-please-config.${{ inputs.semverType }}.json --manifest=release/release-please-manifest.${{ inputs.semverType == 'prerelease' && 'prerelease' || 'prod' }}.json --token=${{ secrets.RP_TOKEN }}
+          node_modules/.bin/release-please github-release --config=release/release-please-config.${{ inputs.semverType }}.json --manifest=release/release-please-manifest.${{ inputs.semverType == 'prerelease' && 'prerelease' || 'prod' }}.json --token=${{ secrets.RP_TOKEN }} --repo-url ${{ github.repository }}
