@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0-next.26](https://github.com/obany/changelog/compare/package-a-v0.1.0-next.25...package-a-v0.1.0-next.26) (2025-03-21)
+
+
+### Miscellaneous Chores
+
+* **package-a:** Synchronize my group versions
+
 ## [0.1.0-next.25](https://github.com/obany/changelog/compare/package-a-0.0.1-next.25...package-a-v0.1.0-next.25) (2025-03-21)
 
 
