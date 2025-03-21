@@ -29,7 +29,7 @@ async function run() {
 	process.stdout.write(`Target Directory: ${targetDirectory}\n`);
 
 	for (const semVerType of ['major', 'minor', 'patch', 'prerelease']) {
-		process.stdout.write(`\nGenerating config for ${semVerType} release...\n`);
+		process.stdout.write(`\nGenerating config for ${semVerType}...\n`);
 		await generateConfig(targetDirectory, semVerType);
 	}
 
