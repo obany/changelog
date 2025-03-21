@@ -1,21 +1,27 @@
 {
+	"release-type": "node",
+	"versioning": "prerelease",
+	"prerelease": true,
+	"prerelease-type": "next",
 	"packages": {
 		"packages/package-a": {
 			"package-name": "package-a",
-			"release-type": "node",
-			"versioning": "prerelease",
-			"prerelease": true,
-			"prerelease-type": "next",
 			"changelog-path": "docs/changelog.md"
 		},
 		"packages/package-b": {
 			"package-name": "package-b",
-			"release-type": "node",
-			"versioning": "prerelease",
-			"prerelease": true,
-			"prerelease-type": "next",
 			"changelog-path": "docs/changelog.md"
 		}
 	},
-	"plugins": ["node-workspace"]
+	"plugins": [
+		"node-workspace",
+		{
+			"type": "linked-versions",
+			"groupName": "my group",
+			"components": [
+				"package-a",
+				"package-b"
+			]
+		}
+	]
 }
