@@ -16,6 +16,11 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Build Config
         run: |
           node ./scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
