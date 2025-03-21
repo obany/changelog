@@ -1,13 +1,13 @@
 {
   "name": "package-b",
-  "version": "0.0.1-next.25",
+  "version": "0.1.0-next.25",
   "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "package-a": "0.0.1-next.25"
+    "package-a": "0.1.0-next.25"
   },
   "author": "",
   "license": "ISC",
