@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Build Config
         run: |
-          node scripts/generate-release-config.js release/release-please-config.json ${{ inputs.semverType }}
+          node scripts/generate-release-config.mjs release/release-please-config.json ${{ inputs.semverType }}
 
       - name: Release Please
         uses: googleapis/release-please-action@v4
