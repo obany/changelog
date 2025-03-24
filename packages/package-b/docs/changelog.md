@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.0.1-next.28](https://github.com/obany/changelog/compare/package-b-v0.0.1-next.27...package-b-v0.0.1-next.28) (2025-03-24)
+
+
+### Miscellaneous Chores
+
+* **package-b:** Synchronize repo versions
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * package-a bumped from 0.0.1-next.27 to 0.0.1-next.28
+
 ## [0.0.1-next.27](https://github.com/obany/changelog/compare/package-b-v0.0.1-next.26...package-b-v0.0.1-next.27) (2025-03-21)
 
 
