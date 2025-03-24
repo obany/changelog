@@ -32,7 +32,7 @@ jobs:
           
           for KEY in $PACKAGES; do
             KEY_VALUE=$(jq -r ".\"$KEY\"" $MANIFEST_FILE)
-            PACKAGE_NAME = ${KEY_VALUE[1]}
+            PACKAGE_NAME=$(echo $KEY_VALUE | tr "/" "\n")
 
             echo "Processing: $KEY: $KEY_VALUE"
 
