@@ -42,8 +42,8 @@ jobs:
             echo "package: $PACKAGE_NAME"
             
             cd $KEY
-            echo npm pack
-            echo gh release upload ${PACKAGE_NAME}-v$KEY_VALUE ${PACKAGE_NAME}-$KEY_VALUE.tgz
+            npm pack
+            gh release upload ${PACKAGE_NAME}-v$KEY_VALUE ${PACKAGE_NAME}-$KEY_VALUE.tgz
             cd ../..
           done
 
