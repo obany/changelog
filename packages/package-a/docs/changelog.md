@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.1-next.28](https://github.com/obany/changelog/compare/package-a-v0.0.1-next.27...package-a-v0.0.1-next.28) (2025-03-24)
+
+
+### Features
+
+* update code ([a65283c](https://github.com/obany/changelog/commit/a65283c36f5adc39360670308442f50ca47a4bbe))
+
 ## [0.0.1-next.27](https://github.com/obany/changelog/compare/package-a-v0.0.1-next.26...package-a-v0.0.1-next.27) (2025-03-21)
 
 
