@@ -26,6 +26,8 @@ jobs:
           cache: 'npm'
 
       - name: iterate
+        env:
+          GITHUB_TOKEN: ${{ secrets.RP_TOKEN }}
         run: |
           MANIFEST_FILE=release/release-please-manifest.${{ inputs.semverType == 'prerelease' && 'prerelease' || 'prod' }}.json
           PACKAGES=$(jq -r 'keys[]' $MANIFEST_FILE)
