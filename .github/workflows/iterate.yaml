@@ -35,7 +35,7 @@ jobs:
             # Split KEY into array using '/' as delimiter
             IFS='/' read -ra KEY_PARTS <<< "$KEY"
             
-            PACKAGE_NAME=${KEY_PARTS[0]}
+            PACKAGE_NAME=${KEY_PARTS[1]}
 
             echo "Processing: $KEY: $KEY_VALUE"
 
