@@ -28,17 +28,20 @@ jobs:
       - name: iterate
         run: |
           MANIFEST_FILE=release/release-please-manifest.${{ inputs.semverType == 'prerelease' && 'prerelease' || 'prod' }}.json
-
-          # Extract array from JSON and iterate through each item
           PACKAGES=$(jq -r 'keys[]' $MANIFEST_FILE)
           
-          # Loop through each root key
           for KEY in $PACKAGES; do
-            echo "Found root key: $KEY"
-            
-            # If you need to access values for each key
             KEY_VALUE=$(jq -r ".\"$KEY\"" $MANIFEST_FILE)
-            echo "Value: $KEY_VALUE"
+            PACKAGE_NAME = ${KEY_VALUE[1]}
+
+            echo "Processing: $KEY: $KEY_VALUE"
+
+            echo "package: $PACKAGE_NAME"
+            
+            cd $KEY
+            echo npm pack
+            echo gh release upload ${PACKAGE_NAME}-v$KEY_VALUE ${PACKAGE_NAME}-$KEY_VALUE.tgz
+            cd ../..
           done
 
       # - name: NPM Publish
