@@ -15,6 +15,9 @@ on:
 jobs:
    publish-release:
     runs-on: ubuntu-latest
+
+    if: (github.ref == 'refs/heads/main' && github.event.inputs.semverType != 'prerelease') || (github.ref == 'refs/heads/next' && github.event.inputs.semverType == 'prerelease')
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
